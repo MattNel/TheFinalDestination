@@ -1,0 +1,61 @@
+
+%----------- Support for relative imports and sectioning --------%
+% If a sectio
+
+%USAGE:
+%------
+%  \thissection{The meaning of life}
+%    And then there was light \ldots
+%    \pushsection
+%    \thissection{What is meaning}
+%      Meaning is an indication of significance and has to always be relative to something.
+%      \pushsection
+%      \thissection{Sub-meaning}
+%        Sub-meaning are of a lower level significance .
+%      \popsection
+%    \popsection
+%  \thissection{What is life}
+%    Life is something which exhibits growth and reproduction.
+
+\usepackage{ifthen}
+
+\setcounter{secnumdepth}{5}
+
+\makeatletter%
+\@ifclassloaded{book}
+%\@ifclassloaded{report}
+{
+  \newcounter{section-level}
+  \setcounter{section-level}{0}
+  \newcommand{\downsection}{\addtocounter{section-level}{1}}
+  \newcommand{\upsection}{\addtocounter{section-level}{-1}}
+  \newcommand{\asection}[1] 
+  {
+    \ifthenelse{\equal{\value{section-level}}{0}}{\chapter{#1}}{}
+    \ifthenelse{\equal{\value{section-level}}{1}}{\section{#1}}{}
+    \ifthenelse{\equal{\value{section-level}}{2}}{\subsection{#1}}{}
+    \ifthenelse{\equal{\value{section-level}}{3}}{\subsubsection{#1}}{}
+    \ifthenelse{\equal{\value{section-level}}{4}}{\paragraph{#1}}{}
+    \ifthenelse{\equal{\value{section-level}}{5}}{\subparagraph{#1}}{}
+    \ifthenelse{\equal{\value{section-level}}{6}}{}{}
+  }
+}
+{
+  \newcounter{section-level}
+  \setcounter{section-level}{0}
+  \newcommand{\downsection}{\addtocounter{section-level}{1}}
+  \newcommand{\upsection}{\addtocounter{section-level}{-1}}
+  \newcommand{\asection}[1]
+  {
+    \ifthenelse{\equal{\value{section-level}}{0}}{\section{#1}}{}
+    \ifthenelse{\equal{\value{section-level}}{1}}{\subsection{#1}}{}
+    \ifthenelse{\equal{\value{section-level}}{2}}{\subsubsection{#1}}{}
+%    \ifthenelse{\equal{\value{section-level}}{3}}{\paragraph{#1}}{}
+%    \ifthenelse{\equal{\value{section-level}}{4}}{\subparagraph{#1}}{}
+    \ifthenelse{\equal{\value{section-level}}{3}}{}{}
+    \ifthenelse{\equal{\value{section-level}}{4}}{}{}
+    \ifthenelse{\equal{\value{section-level}}{5}}{}{}
+  }
+}
+\makeatother%
+
