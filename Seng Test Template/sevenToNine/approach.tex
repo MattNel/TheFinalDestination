@@ -1,0 +1,62 @@
+\subsection{Testing Level -- Unit testing}
+In the given code, no testing constructs were found, as such the Final Destination testing team will carry out the necessary tests.
+Unit tests will be automated by the use of established Android UI testing frameworks. At this level of testing, mock objects will be required to ensure that the testing process can be carried out.
+
+%Semaka
+\subsection{Test Tools}
+
+%Semaka
+\subsection{Meetings}
+
+
+\subsection{Measures and Metrics}
+Metrics for the testing of non-functional requirements will be collected. These will be made available by the Lint Report tool.
+
+%Semaka
+\subsection{Configuration Management}
+
+
+\subsection{Special Requirements}
+The Android module will be assessed according to the given evaluation criteria.
+
+\begin{enumerate}
+
+	\item Front-end process demo
+	 \begin{description}
+			\item The UI of the module should be representative of an Android application UI and should conform to the set standards.
+		\end{description}
+		
+		\item Usability
+	 \begin{description}
+			\item With each click of a link or a button a user should be given appropriate feedback, in that a result of that click should be displayed or an appropriate error message should be thrown. The feedback should be timely as well.
+		\end{description}
+
+	\item Use of external mock objects
+	 \begin{description}
+			\item As a result of a modular system design, the Android module should be able to fulfil all requirements in isolation. As such the use of mock objects is suited as a substitute for the real objects provided by the other system modules. REST API mock objects are needed for this module.
+			\item The implementation will be checked for the use of a Mock REST API.
+		\end{description}
+		
+		 
+		\item Gradle build with appropriate dependencies
+	 \begin{description}
+			\item Dependency management of the module should be handled with Gradle to allow for seamless project build. All Android dependencies should be kept in the Gradle configuration.
+		\end{description}
+		
+	\item  Use of Dependency Injection
+		\begin{description}
+			\item As previously mentioned, the specification for the RSS requiress a modular design, ensuring for less inter-module dependencies. Each isolated module is meant to use Mock objects in place of concrete objects from the respective system modules. These mock objects are meant to be injected into the Android module.
+		\end{description}
+
+
+	\item Use of Fragments
+	 \begin{description}
+			\item The 
+		\end{description}
+		
+	\item Use of REST
+	 \begin{description}
+			\item The Android module should interact with a REST API in order to receive the necessary objects to be displayed on the UI. REST http requests should be made depending on the required data and a back-end server should respond with the appropriate data as long as no error occurs.
+		\end{description}
+
+\end{enumerate}
