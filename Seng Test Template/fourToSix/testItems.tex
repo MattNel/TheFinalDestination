@@ -1,18 +1,79 @@
-The RSS Master Requirements and Design Specifications (version 0.1) did not give enough information on the expected functionality of the Android Module, as such assumptions will be made regarding the functional requirements of the module.
+The RSS Master Requirements and Design Specifications (version 0.1) did not give enough information on the expected functionality of the Android Module, as such assumptions will be made regarding the functional and non-functional requirements of the module.
 
 Assumed test items for the unit testing of the Android Module will include:
 \begin{enumerate}
-	\item Functional Requirements
+	\item Functional Requirements (UI Requirements)
+		
 		\begin{enumerate}
-			\item The Android UI should allow for access to all system modules that require user interaction.
+			\item The Android module should adhere to the following requirements:
+			\begin{itemize}
+				\item The UI should be usable and intuitive
+				\item The UI should be visually appealing and dynamic
+				\item  The user should also be allowed to view only those pages that are for their access level (for instance: \texttt{Researcher, ResearchGroupLeader, Administrator}).
+				\item All relevant inputs from the UI should be persisted to the database, via interaction with a REST API.
+				\item User input should be validate with respect to the required input
+			\end{itemize}
 			
-			\item Each link and button should work
-			\item All input boxes should allowed for input
-			\item User input should be validate with respect to the required input
-			\item The Android module should interact with a REST API to retrieve all necessary content that should be displayed on the UI.
+			\item For each system module, the Android module UI should adhere to the following requirements:
 			
-			\item Usability
+			\begin{itemize}
+				\item \textbf{Publications}
+					\begin{itemize}
+						\item A logged in user should be allowed to add publications, modify as well as manage them from the UI. Also, all actions associated with \texttt{Publication Types} should also be accessible form the UI.
+						\item All actions from the UI should be propagated to the back-end. A link or button should be provided to allow a user to navigate to a space for the Publications module.
+					\end{itemize}
+					
+				\item \textbf{Persons}
+					\begin{itemize}
+						\item The UI should allow for a logged in user to modify their personal details as well as add people to the system.
+						\item A user should also be allowed to manage the members of a research group, whether it be adding or removing.
+						\item Activities associated with the addition, reactivation and suspension of a research group should also be accessible from the UI.
+						
+						\item Lastly, a user should also be allowed to add and modify research categories from the UI.
+					\end{itemize}
+					
+				\item \textbf{Notifications}
+					\begin{itemize}
+						\item Certain functionality of the \texttt{Notifications} module should be accessible form the UI; thus a user should be able to add notifications as well as send notifications
+					\end{itemize}				
+				
+				\item \textbf{Reporting}
+					\begin{itemize}
+						\item All visual report data, that has been generated, should be displayed on the UI.
+						\item Button/links to trigger the generation of reports should be accessible from the UI.
+					\end{itemize}				
+				
+				\item \textbf{Import/Export}
+				\begin{itemize}
+						\item Buttons/links to trigger the importing and exporting of data pertaining to persons, researcher groups, publications should be accessible from the UI.
+						\item Buttons/links to trigger the exporting of a published paper, for a user group. to a bibtex file should also be accessible from the UI
+					\end{itemize}
+					
+			\end{itemize}
+				
+
 			
 		\end{enumerate}
+
+It is assumed that the Web Application Framework (Web module) and Android module are meant to have similar functionality, as such the non-functional requirements given for the Web module are applied here.	
+	\item Non-Functional Requirements
+		\begin{enumerate}
+			\item Usability			
+			\item Maintainability
+			\item Flexibility
+			\item Performance			
+		\end{enumerate}		
 	 
 \end{enumerate}
+
+			
+%
+%
+%\item The Android UI should allow for access to all system modules that require user interaction.
+%
+%\item Each link and button should work
+%\item All input boxes should allowed for input
+%
+%\item The Android module should interact with a REST API to retrieve all necessary content that should be displayed on the UI.
+%
+%\item Usability
