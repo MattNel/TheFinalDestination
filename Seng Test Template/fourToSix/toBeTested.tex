@@ -1,22 +1,22 @@
 
-\subsection{Usability Tests)
+\subsection{Usability Tests}
 
-\subsection{Login Priority:high}
+\subsubsection{Login Priority:high}
 Test application access channel to other services, this involve testing is user is able to login and use other services
 .This servers as a bridge between user and the service provided by the application, thus is important for the feature to work at all time. 
-\\*
 
-\subsection{Add publication Priority:high}
+
+\subsubsection{Add publication Priority:high}
 Test system persistence based on user input, user inputs publication information, filling up required fields.
 This feature inputs private data from the individual, data captured from this model needs to be secured and private to other research groups  
-\\*
 
-\subsection{View Publication Priority:high}
+
+\subsubsection{View Publication Priority:high}
 Search query response based on view publication module, testing where the search query outputs the desired resource.
 Feature involve retrieval of sensitive data entered by the user and need to be available ever time as user request, user can request to edit the data in the module
-\\*
 
-\subsection{Edit profile Priority:Medium}
+
+\subsubsection{Edit profile Priority:Medium}
 Editing of user profile, is the edit persisted and change in appropriate places in the application 
 .Feature involves modification of user information with little impact to the overall system, thus not significant damage is done when the feature service can not be reached 
 
@@ -24,19 +24,19 @@ Editing of user profile, is the edit persisted and change in appropriate places 
 
 
 
-\subsection{Use of external mocks Priority : high )
+\subsection{Use of external mocks Priority : high }
 There were no use of external mocks
 
-\subsection{Gradle build with appropriate dependencies Priority: high )
+\subsection{Gradle build with appropriate dependencies Priority: high }
 Dependencies in gradle build was partially implemented where a connection to a server was attempted but then it was not used anywhere in the code so was not successful.
 
-\subsection{Dependency Injection Priority: high )
+%\subsection{Dependency Injection Priority: high }
 There was no use of dependency injection 
 
-\subsection{Use of fragments Priority:high )
+\subsection{Use of fragments Priority:high }
 
 There was no use of fragments so the advantage of a more modular system fell away. The code was implemented in such a way that a new activity was just created and extended from the main activity. The code was hard coded in making maintenance on the code harder. 
 
-\subsection{Use of REST Priority:high )
+\subsection{Use of REST Priority:high }
 
 The use of REST was partially implemented and not done properly or was not completed. JSON object were created to store the user data but then it is stored locally in a file rather than using android features such as volley request or retro fit where you send the JSON objects to the back-end.
