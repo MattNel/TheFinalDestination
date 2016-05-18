@@ -4,17 +4,26 @@ Unit tests will be automated by the use of established Android UI testing framew
 
 %Semaka
 \subsection{Test Tools}
+A few tools will be used to test the android module, namely: \\
+\renewcommand{\labelenumi}{\Roman{enumi}}
+\begin{itemize}
+	\item Lint
+	  Lint is a tool that checks the quality of your code and find errors that were missed during coding. It is a good tool to use as it can be configured to test code at different levels, i.e. test the modules separately or the entire project, as the developers and testers see fit. The given alpha android code will be tested individually to see if each of the given files work separately and then the it will also be tested on entire project to see how the different files work together.
+	\item junit
+	  JUnit belongs to the xUnit family of unit testing frameworks and it allows writing of repeatable tests for Java code.
+\end{itemize}
 
 %Semaka
 \subsection{Meetings}
-
+The team will meet at least once a week to discuss progress so far and to divide up the remaining work load.
 
 \subsection{Measures and Metrics}
 Metrics for the testing of non-functional requirements will be collected. These will be made available by the Lint Report tool.
 
 %Semaka
 \subsection{Configuration Management}
-
+Only Unit testing will be performed thus only one machine is needed. All testing will be performed using Android Studio. There are no specified hardware requirements for this module so any electronic device that has Android Studio installed and can run Java code can be used to test this module.
+No modifications will be made to the given code except those that will help with testing so there is no need to create different branches on github so as not to hinder production. Thus, only master will be used to make things simpler for the testers.
 
 \subsection{Special Requirements}
 The Android module will be assessed according to the given evaluation criteria.
@@ -23,7 +32,7 @@ The Android module will be assessed according to the given evaluation criteria.
 
 	\item Front-end process demo
 	 \begin{description}
-			\item The UI of the module should be representative of an Android application UI and should conform to the set standards.
+			\item The UI of the module should be representative of an Android application UI and should conform to the set standards of an Android UI.
 		\end{description}
 		
 		\item Usability
