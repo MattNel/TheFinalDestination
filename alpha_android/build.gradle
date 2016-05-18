@@ -6,6 +6,10 @@ group = 'com.codinginfinity.research.android'
 version = '1.0.0-SNAPSHOT'
 
 repositories {
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
     maven {
         credentials {
             username = '14022282'
@@ -13,9 +17,11 @@ repositories {
         }
         url "https://nexus.codinginfinity.com/content/repositories/snapshots"
     }
+
 }
 
 buildscript {
+
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.0'
     }
@@ -37,9 +43,16 @@ uploadArchives {
 allprojects {
     repositories {
         jcenter()
+        mavenCentral()
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-annotations:23.1.1'
+    }
 }
